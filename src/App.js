@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import ButtonAppBar from './TopAppBar';
+import Paper from '@material-ui/core/Paper';
+import Hello from './Hello';
+import './style.css';
+import { render } from 'react-dom';
+import Box from "@material-ui/core/Box";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default function App(props) {
+    const name = "React";
+
+  
+    return (
+      <>
+      <CssBaseline />
+      <ButtonAppBar/>
+      <Box m={10}>
+        <div>
+            <Hello name="react"/>
+            <p>
+            Start editing to see some magic happen :)
+            </p>
+        </div>
+      </Box>
+      </>
+    );
+  
 }
-
-export default App;
